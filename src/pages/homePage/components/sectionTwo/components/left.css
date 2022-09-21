@@ -1,0 +1,52 @@
+.leftBox-wrapper {
+  position: relative;
+  width: 25%;
+  padding: 20px;
+  margin: auto;
+  overflow: hidden;
+  text-align: justify;
+  line-height: 1.2;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5em;
+  margin: 2em;
+}
+
+.leftBox-title {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 5px;
+}
+
+.leftBox-wrapper :before {
+  content: "";
+  position: absolute;
+  top: 70%;
+  right: 0;
+  border-width: 50px 50px 0 0;
+  border-radius: 30% 0 0 0;
+  border-style: solid;
+  border-color: #fff rgb(230, 232, 211) #fff rgb(230, 232, 211);
+}
+
+.img-left {
+  background-image: url(../../../assets/pen.jpg);
+  width: 40px;
+  height: 40px;
+}
+
+.text-left {
+  margin-bottom: 2.5em;
+}
+
+@media only screen and (max-width: 1200px) {
+  .leftBox-wrapper {
+    width: 40%;
+  }
+}
+@media only screen and (max-width: 800px) {
+  .leftBox-wrapper {
+    width: 80%;
+  }
+}

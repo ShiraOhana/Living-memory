@@ -1,0 +1,314 @@
+* {
+  box-sizing: border-box;  
+}
+.MuiInputBase-input::placeholder{
+  text-transform: capitalize !important;  
+}
+.form {
+  width: 1000px;
+  margin: auto;
+  padding-top:120px;
+  position:relative  
+}
+
+.wizard-title:before{
+  content: " ";
+  width:100px;
+  height:100px;
+  background: url("../../../public/images/3100_R0lVIE5JQyA3MzQtMDc.jpg");
+  background-size: cover;
+  position: absolute;
+  left: -9px;
+  top: -21px;
+}
+
+.wizard-title {
+  text-align: center;
+  position:absolute;
+  left: 0;
+  top:0;
+  margin-top:0;
+  padding-top:15px;
+  width:100%;
+  opacity:1;
+  height:70px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;  
+  background-position: center;
+  color:#444;  
+  text-shadow: 2px 3px 1px #ddd;
+  font-size:32px;
+  position: absolute;
+  z-index: 1;
+  
+}
+
+.body {
+  position: relative;
+  top: 100px;
+}
+
+.progressbar {
+  position: relative;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  margin: 2rem 0 4rem 0;
+  counter-reset: steps;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.progress-steps {
+  width: 70px;
+  height: 70px;
+  font-size:30px;
+  background-color: beige;
+  border: 2px solid #999;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+}
+
+.progress-steps::before {
+  counter-increment: steps;
+  content: counter(steps);
+  color: black;
+}
+
+.progress-steps::after {
+  content: attr(data-title);
+  position: absolute;
+  top: calc(100% - 0.01rem);
+  color: black;
+  font-size: 1.1rem;
+}
+
+.progress-steps.active {
+  background-color: #b6d0e2;
+}
+
+.progressbar::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 4px;
+  width: 94%;
+  background-color: black;
+}
+
+/* .footer {
+  position: relative;
+  top: 150px;
+  display: flex;
+  justify-content: space-between;
+  max-width: 150px;
+  margin: auto;
+} */
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 200px;
+}
+
+.prev-btn {
+  margin-right: 5px;
+}
+.next-btn {
+  margin-right: 5px;
+}
+
+/* .form-container {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+} */
+
+.memorial-info-title {
+  font-weight: bold;
+  font-size: 55px;
+  margin-bottom: 15px;
+}
+
+.memorial-info-container {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  grid-template-columns: 200px 200px;
+  grid-auto-rows: minmax(auto, auto);
+  gap: 20px;
+  grid-template-areas:
+    "username email"
+    "usernameval emailval"
+    "borntitle passingtitle"
+    "borndate passingdate"
+    "borndateval passingdateval"
+    "about about"
+    
+}
+
+.memorial-info-grid-1 {
+  grid-area: username;
+  margin-bottom: 20px;
+}
+
+.memorial-info-grid-8 {
+  grid-area: usernameval;
+  /* margin-bottom: 20px; */
+}
+
+.memorial-info-grid-8:nth-child(2){
+  margin-top:-20px;
+}
+.memorial-info-grid-9 {
+  grid-area: emailval;
+  /* margin-bottom: 20px; */
+}
+.memorial-info-grid-9:nth-child(4){
+  margin-top:-20px;
+}
+.memorial-info-grid-10 {
+  grid-area: borndateval;
+  margin-bottom: 20px;
+}
+.memorial-info-grid-10:nth-child(7){
+  margin-top:-20px;
+}
+.memorial-info-grid-11 {
+  grid-area: passingdateval;
+  margin-bottom: 20px;
+}
+.memorial-info-grid-11:nth-child(10){
+  margin-top:-20px;
+}
+.memorial-info-grid-12:nth-child(12){
+  margin-top:-20px;
+}
+
+.memorial-info-grid-2 {
+  grid-area: email;
+  margin-bottom: 20px;
+}
+.memorial-info-grid-3 {
+  grid-area: borndate;
+  height: 40px;
+}
+.memorial-info-grid-4 {
+  grid-area: passingdate;
+  height: 40px;
+}
+.memorial-info-grid-5 {
+  grid-area: about;
+}
+.memorial-info-grid-6 {
+  grid-area: borntitle;
+  display: grid;
+  justify-items: start;
+  margin-bottom: -18px;
+  color: #484848;
+}
+
+.memorial-info-grid-7 {
+  grid-area: passingtitle;
+  display: grid;
+  justify-items: start;
+  margin-bottom: -18px;
+  color: #484848;
+}
+
+.personal-info-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.field {
+  margin:0.3em;
+}
+
+.summary-container {
+  max-width: 1000px;
+  margin: auto;
+  display: grid;
+  justify-content: center;
+  justify-items: start;
+  align-items: center;
+  grid-template-columns: minmax(auto, auto);
+  grid-auto-rows: minmax(auto, auto);
+  gap: 25px 50px;
+  grid-template-areas:
+    "header1 firstname"
+    ". lastname"
+    ". email"
+    "header2 username"
+    ". facebookEmail"
+    ". birthdate"
+    ". passingdate"
+    ". about";
+}
+
+.summary-container-grid-1 {
+  grid-area: header1;
+}
+.summary-container-grid-2 {
+  grid-area: firstname;
+}
+.summary-container-grid-3 {
+  grid-area: lastname;
+}
+.summary-container-grid-4 {
+  grid-area: email;
+}
+.summary-container-grid-5 {
+  grid-area: header2;
+}
+.summary-container-grid-6 {
+  grid-area: username;
+}
+.summary-container-grid-7 {
+  grid-area: facebookEmail;
+}
+.summary-container-grid-8 {
+  grid-area: birthdate;
+}
+.summary-container-grid-9 {
+  grid-area: passingdate;
+}
+.summary-container-grid-10 {
+  grid-area: about;
+  display: flex;
+  align-items: flex-start;
+}
+
+.summary-container-grid-firstname {
+  border: 1px solid #484848;
+  padding: 0 1rem 0 1rem;
+  margin-left: 10px;
+}
+
+.summary-subTitle {
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.summary-about {
+  display: inline-block;
+  margin-left: 7px;
+  width: 30%;
+  height: auto;
+  text-align: left;
+  flex: 3;
+  line-height: 1.7;
+}
+
+.personal-info-firstname-validation{
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: flex-start;
+}

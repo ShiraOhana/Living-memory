@@ -1,0 +1,9 @@
+.view {
+  color: #e35f21;
+  text-align: center;
+}
+
+.view:hover {
+  cursor: pointer;
+  font-weight: lighter;
+}

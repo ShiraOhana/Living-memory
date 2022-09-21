@@ -1,0 +1,54 @@
+.random-post-wrapper {
+  width: 25%;
+  padding: 20px;
+  margin: auto;
+  overflow: hidden;
+  text-align: left;
+  line-height: 1.2;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  margin: 2em;
+}
+
+.random-post-text {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.random-post-text img {
+  width: 90%;
+}
+
+.random-post-icon {  
+  background-repeat: no-repeat;
+  width: 80px;
+  height: 40px;
+}
+
+.type-image .random-post-icon {
+  background-image: url(../../../assets/bookIcon.png);
+}
+.type-text .random-post-icon {
+  background-image: url(../../../assets/pen.jpg);
+}
+.random-post-title {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 5px;
+}
+
+
+@media only screen and (max-width: 1200px) {
+  .random-post-wrapper {
+    width: 40%;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .random-post-wrapper {
+    width: 80%;
+  }
+}

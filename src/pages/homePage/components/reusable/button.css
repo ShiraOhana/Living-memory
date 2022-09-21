@@ -1,0 +1,25 @@
+.btnHome {
+  /* display: inline-block; */
+
+  margin: 0.1em 0.3em 0.6em 0.4em;
+  border-radius: 7px;
+  box-sizing: border-box;
+  font-weight: 300;
+  color: #ffffff;
+  background-color: #be4b16;
+  text-align: center;
+  transition: all 0.2s;
+  border: none;
+  padding: 6px;
+  font-size: 0.8rem;
+}
+.btnHome:hover {
+  background-color: #de845a;
+  cursor: pointer;
+}
+@media all and (max-width: 30em) {
+  .btn {
+    display: block;
+    margin: 0.2em auto;
+  }
+}
